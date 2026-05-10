@@ -1,0 +1,200 @@
+{
+  "profile": {
+    "name": "Tony",
+    "handle": "astowny",
+    "tagline": "Builder & indie hacker. Web3, AI, and shipping fast.",
+    "location": "Côte d'Ivoire / Paris",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/astowny" },
+      { "label": "Email",  "url": "mailto:astowny@gmail.com" }
+    ]
+  },
+  "sections": [
+    {
+      "id": "skilance",
+      "title": "Skilance",
+      "subtitle": "Marketplace freelance — 0% commission, abonnement plat.",
+      "items": [
+        {
+          "name": "Skilance",
+          "description": "Plateforme de mise en relation freelance / clients. Modèle d'abonnement plat sans commission par mission.",
+          "tags": ["Marketplace", "Freelance", "SaaS"],
+          "links": [
+            { "label": "Live", "url": "https://skilance.devanchor.company" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "subtitle": "Apps déployées en production sur Vercel.",
+      "items": [
+        {
+          "name": "Yada Project — SendGrid API",
+          "description": "API de transactionnel email pour le projet Yada, déployée sur Vercel.",
+          "tags": ["TypeScript", "SendGrid", "API"],
+          "links": [
+            { "label": "Live", "url": "https://yada-project-sendgrid-api.vercel.app" },
+            { "label": "Code", "url": "https://github.com/astowny/yada-project-sendgrid-api" }
+          ]
+        },
+        {
+          "name": "CV ATS Optimizer",
+          "description": "Outil pour optimiser les CV face aux ATS (Applicant Tracking Systems).",
+          "tags": ["JavaScript", "AI", "Tooling"],
+          "links": [
+            { "label": "Live", "url": "https://cv-ats-optimizer.vercel.app" },
+            { "label": "Code", "url": "https://github.com/astowny/cv-ats-optimizer" }
+          ]
+        },
+        {
+          "name": "SaaS Useful Tools",
+          "description": "Boîte à outils SaaS — utilitaires divers pour devs et créateurs.",
+          "tags": ["JavaScript", "SaaS", "Tools"],
+          "links": [
+            { "label": "Live", "url": "https://saas-useful-tools.vercel.app" },
+            { "label": "Code", "url": "https://github.com/astowny/saas-useful-tools" }
+          ]
+        },
+        {
+          "name": "Documentation",
+          "description": "Site de documentation technique (MDX/Next.js).",
+          "tags": ["MDX", "Next.js", "Docs"],
+          "links": [
+            { "label": "Live", "url": "https://documentation-astowny.vercel.app" },
+            { "label": "Code", "url": "https://github.com/astowny/documentation" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-studio",
+      "title": "Google AI Studio",
+      "subtitle": "Applets Gemini construites sur Google AI Studio.",
+      "items": [
+        {
+          "name": "Product Studio AI",
+          "description": "Édition photo professionnelle et nettoyage de photos produit, propulsé par Gemini 2.5 Flash Image.",
+          "tags": ["Gemini", "Image", "Applet"],
+          "links": [
+            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2212AyZ3MxvglvC2CXzUFNVzzq5uAq5yjhI%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" }
+          ]
+        },
+        {
+          "name": "SmartQuote GenAI",
+          "description": "Générateur de devis intelligent avec sélection de templates et assistance IA pour la rédaction.",
+          "tags": ["Gemini", "Productivity", "Applet"],
+          "links": [
+            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221M6T42oeW_FXhr7rSq5ZYykoX-Lt4a_W3%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" },
+            { "label": "Code", "url": "https://github.com/astowny/devis-generator-from-gemini" }
+          ]
+        },
+        {
+          "name": "SocialForge",
+          "description": "Générateur de contenu cross-platform : drafts de posts + images dédiées pour LinkedIn, X et Instagram.",
+          "tags": ["Gemini", "Social", "Applet"],
+          "links": [
+            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210A-n1EwyfU_0X8hDwLWDYrOM0DgDsRlm%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" }
+          ]
+        },
+        {
+          "name": "SVG Generator",
+          "description": "Décris un objet, une icône ou une scène — l'app le rend en SVG vectoriel.",
+          "tags": ["Gemini", "Vector", "Applet"],
+          "links": [
+            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221AO2uR6OXFcfxpbY50UNzUxm7BpPN8ynz%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" },
+            { "label": "Code", "url": "https://github.com/astowny/svg-generator" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "title": "GitHub",
+      "subtitle": "Sélection de projets open / publics sur GitHub.",
+      "items": [
+        {
+          "name": "Monteur IA",
+          "description": "Outil de montage vidéo assisté par IA.",
+          "tags": ["Python", "AI", "Video"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/monteur-ia" }
+          ]
+        },
+        {
+          "name": "Splitbill AI",
+          "description": "App d'IA pour répartir les additions entre amis automatiquement.",
+          "tags": ["AI", "Utility"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/splitbill-ai" }
+          ]
+        },
+        {
+          "name": "Recruitment Sandbox",
+          "description": "Outil génératif d'IA pour le recrutement.",
+          "tags": ["TypeScript", "AI", "HR"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/recruitment-sandbox" }
+          ]
+        },
+        {
+          "name": "Infogenius",
+          "description": "Plateforme info / contenu propulsée par IA.",
+          "tags": ["TypeScript", "AI"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/infogenius" }
+          ]
+        },
+        {
+          "name": "Useful Tools",
+          "description": "Collection d'utilitaires web pratiques.",
+          "tags": ["HTML", "Tools"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/useful-tools" }
+          ]
+        },
+        {
+          "name": "Betting Platform",
+          "description": "Prototype de plateforme de paris.",
+          "tags": ["CSS", "Web"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/betting-platform" }
+          ]
+        },
+        {
+          "name": "Deepfake Detector",
+          "description": "Détecteur de deepfakes (Jupyter / vision).",
+          "tags": ["Python", "ML", "Vision"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/deepfake-detector" }
+          ]
+        },
+        {
+          "name": "Blockchain Scripts",
+          "description": "Scripts utilitaires multi-chaînes (EVM).",
+          "tags": ["JavaScript", "Web3"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/blockchain-scripts" }
+          ]
+        },
+        {
+          "name": "Python YouTube Link Fetcher",
+          "description": "Récupère et extrait des liens YouTube en Python.",
+          "tags": ["Python", "Scraping"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/python-get-youtube-link" }
+          ]
+        },
+        {
+          "name": "Estimation WhatsApp",
+          "description": "Outil d'estimation devis via WhatsApp.",
+          "tags": ["HTML", "Productivity"],
+          "links": [
+            { "label": "Code", "url": "https://github.com/astowny/estimation-whatsapp" }
+          ]
+        }
+      ]
+    }
+  ]
+}
