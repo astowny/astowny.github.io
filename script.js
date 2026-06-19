@@ -170,15 +170,29 @@
     });
   }
 
+  function isLive(pr) {
+    return !!(pr.links && pr.links.some(function (l) { return /live/i.test(l.label); }));
+  }
+
   function renderProjects(filter) {
     var g = $('#projects-grid'); g.innerHTML = '';
-    DATA.projects.forEach(function (pr) {
-      var match = filter === 'all' || (filter === 'featured' ? pr.featured : pr.category === filter);
+    // surface live work first, then flagships — keep original order otherwise
+    var ordered = DATA.projects
+      .map(function (pr, i) { return { pr: pr, i: i, rank: (isLive(pr) ? 2 : 0) + (pr.featured ? 1 : 0) }; })
+      .sort(function (a, b) { return b.rank - a.rank || a.i - b.i; })
+      .map(function (o) { return o.pr; });
+
+    ordered.forEach(function (pr) {
+      var live = isLive(pr);
+      var match = filter === 'all' ||
+        (filter === 'featured' ? pr.featured : filter === 'live' ? live : pr.category === filter);
       if (!match) return;
-      var card = el('div', 'project reveal' + (pr.featured ? ' featured' : ''));
+      var card = el('div', 'project reveal' + (pr.featured ? ' featured' : '') + (live ? ' is-live' : ''));
       var top = el('div', 'project-top');
-      top.innerHTML = '<span class="project-name">' + pr.name + '</span>' +
-        (pr.featured ? '<span class="project-star">★ ' + (lang === 'fr' ? 'PHARE' : 'FLAGSHIP') + '</span>' : '');
+      var badge = live
+        ? '<span class="project-live">● ' + (lang === 'fr' ? 'EN LIGNE' : 'LIVE') + '</span>'
+        : (pr.featured ? '<span class="project-star">★ ' + (lang === 'fr' ? 'PHARE' : 'FLAGSHIP') + '</span>' : '');
+      top.innerHTML = '<span class="project-name">' + pr.name + '</span>' + badge;
       card.appendChild(top);
       if (pr.tagline) card.appendChild(el('div', 'project-tagline', t(pr.tagline)));
       card.appendChild(el('p', 'project-desc', t(pr.description)));

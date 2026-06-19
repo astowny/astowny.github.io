@@ -35,6 +35,7 @@
     { "category": { "fr": "Web3 & Blockchain", "en": "Web3 & Blockchain" }, "items": ["Smart contracts", "Minima", "EVM (ETH / BSC / Polygon)", "DeFi", "Tokenomics", "THORChain"] },
     { "category": { "fr": "Données", "en": "Data" }, "items": ["SQL", "PostgreSQL", "TimescaleDB", "MongoDB", "ElasticSearch", "Supabase", "Firebase"] },
     { "category": { "fr": "Scraping & ETL", "en": "Scraping & ETL" }, "items": ["BeautifulSoup", "Selenium", "Apache Spark", "Pipelines ETL"] },
+    { "category": { "fr": "CMS & E-commerce", "en": "CMS & E-commerce" }, "items": ["WordPress", "Elementor", "WooCommerce", "PHP", "SEO"] },
     { "category": { "fr": "DevOps & Cloud", "en": "DevOps & Cloud" }, "items": ["Docker", "Kubernetes", "Jenkins", "CI/CD", "Git", "GCP", "AWS", "Azure", "Vercel", "Cloudflare", "VPS"] },
     { "category": { "fr": "Outils", "en": "Tools" }, "items": ["MCP", "Make.com", "Bubble.io", "Appsmith", "StackBlitz", "Replit"] }
   ],
@@ -104,15 +105,17 @@
       "period": { "fr": "Mars 2020 — Oct. 2023", "en": "Mar. 2020 — Oct. 2023" },
       "bullets": {
         "fr": [
-          "7 sites vitrines et une plateforme e-commerce (WordPress, JS/PHP).",
+          "7 sites vitrines et une plateforme e-commerce sous WordPress (Elementor, WooCommerce, JS/PHP).",
+          "Thèmes & templates sur-mesure, intégration WooCommerce (paiement, catalogue, tunnel d'achat).",
           "Cycle de projet complet : UI, dev, SEO, hébergement, suivi de production."
         ],
         "en": [
-          "7 showcase websites and an e-commerce platform (WordPress, JS/PHP).",
+          "7 showcase websites and an e-commerce platform on WordPress (Elementor, WooCommerce, JS/PHP).",
+          "Custom themes & templates, WooCommerce integration (payment, catalog, checkout funnel).",
           "Full project cycle: UI, dev, SEO, hosting, production monitoring."
         ]
       },
-      "tags": ["WordPress", "PHP", "JavaScript", "SEO"]
+      "tags": ["WordPress", "Elementor", "WooCommerce", "PHP", "SEO"]
     },
     {
       "role": { "fr": "Développeur Web — Alternance", "en": "Web Developer — Apprenticeship" },
@@ -133,6 +136,7 @@
   ],
   "projectFilters": [
     { "id": "all", "label": { "fr": "Tous", "en": "All" } },
+    { "id": "live", "label": { "fr": "● En ligne", "en": "● Live" } },
     { "id": "featured", "label": { "fr": "Phares", "en": "Flagship" } },
     { "id": "web3", "label": { "fr": "Web3 & DeFi", "en": "Web3 & DeFi" } },
     { "id": "ai", "label": { "fr": "Agents IA & LLM", "en": "AI Agents & LLM" } },
@@ -376,6 +380,17 @@
       },
       "tags": ["TypeScript", "AI", "SaaS"],
       "links": [{ "label": "Code", "url": "https://github.com/astowny/infogenius" }]
+    },
+    {
+      "name": "Sites WordPress & E-commerce",
+      "category": "saas",
+      "tagline": { "fr": "Freelance — WordPress / WooCommerce", "en": "Freelance — WordPress / WooCommerce" },
+      "description": {
+        "fr": "7 sites vitrines et une boutique e-commerce livrés en freelance : WordPress + Elementor, intégration WooCommerce (catalogue, paiement, tunnel d'achat), SEO et hébergement.",
+        "en": "7 showcase websites and an e-commerce store delivered as a freelancer: WordPress + Elementor, WooCommerce integration (catalog, payment, checkout funnel), SEO and hosting."
+      },
+      "tags": ["WordPress", "Elementor", "WooCommerce", "PHP", "SEO"],
+      "links": []
     },
     {
       "name": "SaaS Useful Tools",
