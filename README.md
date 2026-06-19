@@ -1,58 +1,65 @@
 # astowny.github.io
 
-Portfolio statique déployé sur GitHub Pages : https://astowny.github.io
+Portfolio de **Tony Duong** — Ingénieur Fullstack & IA.
+En ligne : https://astowny.github.io
 
-## Mettre à jour les projets
+Site statique, **zéro build**, déployé sur GitHub Pages. Fond 3D interactif
+(Three.js, réseau de neurones réactif à la souris), bilingue **FR / EN**,
+animations au scroll, projets filtrables.
 
-Tout vit dans `data.json`. Édite ce fichier, commit, push — Pages redéploie automatiquement.
+## Structure
+
+| Fichier      | Rôle |
+|--------------|------|
+| `index.html` | structure des sections + import map Three.js |
+| `style.css`  | thème teal (repris du CV), glassmorphism, responsive |
+| `bg.js`      | scène 3D Three.js (module ES, via CDN jsDelivr) |
+| `script.js`  | rendu du contenu depuis `data.json`, i18n, filtres, curseur, scroll-spy |
+| `data.json`  | **tout le contenu** (profil, compétences, expérience, projets, formation) |
+
+## Mettre à jour le contenu
+
+Tout vit dans `data.json`. Les textes traduisibles sont des objets `{ "fr": "...", "en": "..." }`.
+
+### Ajouter un projet
+Ajoute un objet dans `projects` :
 
 ```jsonc
 {
-  "profile": { "name": "...", "tagline": "...", "links": [ ... ] },
-  "sections": [
-    {
-      "id": "github",                 // utilisé pour l'ancre #section-github
-      "title": "GitHub",
-      "subtitle": "...",
-      "items": [
-        {
-          "name": "Mon projet",
-          "description": "Une phrase.",
-          "tags": ["TypeScript", "AI"],
-          "links": [
-            { "label": "Live", "url": "https://..." },
-            { "label": "Code", "url": "https://github.com/..." }
-          ]
-        }
-      ]
-    }
+  "name": "Mon projet",
+  "featured": true,                    // optionnel : badge "Phare"
+  "category": "ai",                    // web3 | ai | vision | saas
+  "tagline": { "fr": "...", "en": "..." },
+  "description": { "fr": "...", "en": "..." },
+  "tags": ["TypeScript", "AI"],
+  "links": [
+    { "label": "Live", "url": "https://..." },   // "Live" -> pastille verte animée
+    { "label": "Code", "url": "https://github.com/..." }
   ]
 }
 ```
 
-### Ajouter un projet
-Ouvre `data.json`, repère la section (`github`, `vercel`, `ai-studio`, `skilance`, …), ajoute un objet dans `items`. Pas besoin d'autre changement.
-
-### Ajouter une nouvelle plateforme
-Ajoute un objet dans `sections` avec un `id` unique. La nav et la section apparaissent automatiquement.
-
-## Stack
-
-- Static HTML/CSS/JS, zéro framework, zéro build.
-- Dark/light auto avec toggle (préférence système + localStorage).
-- Données séparées dans `data.json` pour édition rapide.
-
-## Déploiement
-
-GitHub Pages sert la branche `main` à la racine. Aucun workflow nécessaire.
+La catégorie doit exister dans `projectFilters` (sinon ajoute-la). Pas d'autre changement.
 
 ## Local
 
 ```bash
-# n'importe quel serveur statique fait l'affaire
+# n'importe quel serveur statique (le fetch de data.json ne marche pas en file://)
 python -m http.server 8000
 # ou
 npx serve .
 ```
 
 Puis ouvre http://localhost:8000.
+
+## Déploiement
+
+GitHub Pages sert la branche `main` à la racine. Push = redéploiement automatique.
+Aucun workflow nécessaire.
+
+## Accessibilité / perf
+
+- `prefers-reduced-motion` respecté (3D figée, animations désactivées).
+- Fallback gradient si WebGL indisponible.
+- Rendu 3D mis en pause quand l'onglet est masqué.
+- Curseur custom désactivé sur écrans tactiles.

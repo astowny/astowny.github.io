@@ -1,200 +1,433 @@
 {
   "profile": {
-    "name": "Tony",
+    "name": "Tony Duong",
     "handle": "astowny",
-    "tagline": "Builder & indie hacker. Web3, AI, and shipping fast.",
-    "location": "Côte d'Ivoire / Paris",
+    "role": { "fr": "Ingénieur Fullstack & IA", "en": "Fullstack & AI Engineer" },
+    "tagline": {
+      "fr": "Je conçois des plateformes web modernes, des systèmes d'IA et des architectures décentralisées — du cadrage d'architecture jusqu'à la mise en production.",
+      "en": "I design modern web platforms, AI systems and decentralized architectures — from architecture scoping all the way to production."
+    },
+    "location": { "fr": "Bordeaux, France", "en": "Bordeaux, France" },
+    "experience": { "fr": "7 ans d'expérience", "en": "7 years of experience" },
+    "email": "astowny@gmail.com",
+    "phone": "07 68 01 20 72",
     "links": [
-      { "label": "GitHub", "url": "https://github.com/astowny" },
-      { "label": "Email",  "url": "mailto:astowny@gmail.com" }
+      { "label": "GitHub", "url": "https://github.com/astowny", "icon": "github" },
+      { "label": "Email", "url": "mailto:astowny@gmail.com", "icon": "mail" }
     ]
   },
-  "sections": [
+  "stats": [
+    { "value": "7", "label": { "fr": "ans d'expérience", "en": "years of experience" } },
+    { "value": "150+", "label": { "fr": "dépôts GitHub", "en": "GitHub repositories" } },
+    { "value": "20+", "label": { "fr": "projets cloud déployés", "en": "cloud projects shipped" } },
+    { "value": "5", "label": { "fr": "formations enseignées", "en": "courses taught" } }
+  ],
+  "about": {
+    "fr": "Ingénieur Fullstack & IA avec 7 ans d'expérience, à l'aise du cadrage d'architecture jusqu'à la mise en production. Je conçois des plateformes web modernes, des systèmes d'IA (vision, NLP, synthèse vocale), des agents et des architectures décentralisées (Web3), avec une exigence d'architecture propre (hexagonale, DDD), de tests et de maintenabilité. R&D intensive : 150+ dépôts GitHub et 20+ projets cloud déployés. Sensibilité forte à la gouvernance et à la conformité de l'IA (EU AI Act, NIST AI RMF, ISO/IEC 42001).",
+    "en": "Fullstack & AI engineer with 7 years of experience, comfortable from architecture scoping to production deployment. I design modern web platforms, AI systems (vision, NLP, speech synthesis), agents and decentralized architectures (Web3), with a strong emphasis on clean architecture (hexagonal, DDD), testing and maintainability. Intensive R&D: 150+ GitHub repositories and 20+ cloud projects shipped. Strong focus on AI governance and compliance (EU AI Act, NIST AI RMF, ISO/IEC 42001)."
+  },
+  "skills": [
+    { "category": { "fr": "IA & Data", "en": "AI & Data" }, "items": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "TTS", "TensorFlow", "scikit-learn", "YOLO", "Pandas", "GPT / Transformers", "RAG & Agentic AI", "Google ADK", "Gemini API", "Streamlit"] },
+    { "category": { "fr": "Gouvernance IA", "en": "AI Governance" }, "items": ["EU AI Act", "NIST AI RMF", "ISO/IEC 42001", "Éthique IA"] },
+    { "category": { "fr": "Frontend", "en": "Frontend" }, "items": ["Vue.js 2 / 3", "Angular", "React.js", "React Native", "Next.js 15", "Nuxt", "TypeScript", "SASS", "TailwindCSS"] },
+    { "category": { "fr": "Backend", "en": "Backend" }, "items": ["Python", "FastAPI", "Django", "Flask", "Node.js", "NestJS", "Hono", "API REST", "Microservices", "OAuth2"] },
+    { "category": { "fr": "Architecture", "en": "Architecture" }, "items": ["Hexagonale", "DDD", "TDD", "BDD"] },
+    { "category": { "fr": "Web3 & Blockchain", "en": "Web3 & Blockchain" }, "items": ["Smart contracts", "Minima", "EVM (ETH / BSC / Polygon)", "DeFi", "Tokenomics", "THORChain"] },
+    { "category": { "fr": "Données", "en": "Data" }, "items": ["SQL", "PostgreSQL", "TimescaleDB", "MongoDB", "ElasticSearch", "Supabase", "Firebase"] },
+    { "category": { "fr": "Scraping & ETL", "en": "Scraping & ETL" }, "items": ["BeautifulSoup", "Selenium", "Apache Spark", "Pipelines ETL"] },
+    { "category": { "fr": "DevOps & Cloud", "en": "DevOps & Cloud" }, "items": ["Docker", "Kubernetes", "Jenkins", "CI/CD", "Git", "GCP", "AWS", "Azure", "Vercel", "Cloudflare", "VPS"] },
+    { "category": { "fr": "Outils", "en": "Tools" }, "items": ["MCP", "Make.com", "Bubble.io", "Appsmith", "StackBlitz", "Replit"] }
+  ],
+  "experience": [
     {
-      "id": "skilance",
-      "title": "Skilance",
-      "subtitle": "Marketplace freelance — 0% commission, abonnement plat.",
-      "items": [
-        {
-          "name": "Skilance",
-          "description": "Plateforme de mise en relation freelance / clients. Modèle d'abonnement plat sans commission par mission.",
-          "tags": ["Marketplace", "Freelance", "SaaS"],
-          "links": [
-            { "label": "Live", "url": "https://skilance.devanchor.company" }
-          ]
-        }
+      "role": { "fr": "Associé & Tech Lead", "en": "Partner & Tech Lead" },
+      "company": "Econumerica",
+      "period": { "fr": "Janv. 2024 — Aujourd'hui", "en": "Jan. 2024 — Present" },
+      "current": true,
+      "bullets": {
+        "fr": [
+          "Pilotage technique : architecture, conception et développement de plateformes internes (Angular, TypeScript).",
+          "API REST & microservices en architecture hexagonale (DDD), démarche TDD/BDD.",
+          "Conception de systèmes d'automatisation par IA et d'un assistant chatbot vocal empathique (TTS + raisonnement LLM).",
+          "Pipelines ETL & data engineering (Python, BeautifulSoup, Selenium, Apache Spark, AWS S3) et modèles prédictifs.",
+          "Déploiements conteneurisés (Docker) sur VPS, environnements hybrides (AWS S3) et envs de test."
+        ],
+        "en": [
+          "Technical leadership: architecture, design and development of internal platforms (Angular, TypeScript).",
+          "REST APIs & microservices in hexagonal architecture (DDD), TDD/BDD approach.",
+          "Design of AI automation systems and an empathic voice chatbot assistant (TTS + LLM reasoning).",
+          "ETL & data engineering pipelines (Python, BeautifulSoup, Selenium, Apache Spark, AWS S3) and predictive models.",
+          "Containerized deployments (Docker) on VPS, hybrid environments (AWS S3) and test envs."
+        ]
+      },
+      "tags": ["Angular", "TypeScript", "DDD", "Python", "TTS", "Docker"]
+    },
+    {
+      "role": { "fr": "Développeur JavaScript", "en": "JavaScript Developer" },
+      "company": "Amiltone",
+      "period": { "fr": "Mai 2022 — Mai 2023", "en": "May 2022 — May 2023" },
+      "bullets": {
+        "fr": [
+          "Développement fullstack (Vue.js 3, TypeScript, Node.js, SASS).",
+          "Migration de la plateforme FloaBank (partenariat Basikon).",
+          "Intégration & maintenance d'ElasticSearch ; architecture, revues de code et refactorisation."
+        ],
+        "en": [
+          "Fullstack development (Vue.js 3, TypeScript, Node.js, SASS).",
+          "Migration of the FloaBank platform (Basikon partnership).",
+          "ElasticSearch integration & maintenance; architecture, code reviews and refactoring."
+        ]
+      },
+      "tags": ["Vue.js 3", "TypeScript", "Node.js", "ElasticSearch"]
+    },
+    {
+      "role": { "fr": "Développeur Web Junior", "en": "Junior Web Developer" },
+      "company": "TEHTRIS",
+      "period": { "fr": "Avr. 2020 — Mars 2022", "en": "Apr. 2020 — Mar. 2022" },
+      "bullets": {
+        "fr": [
+          "Nouvelles fonctionnalités Vue.js 2 / 3 + Vuetify (TypeScript, SASS).",
+          "Refonte et amélioration de l'interface et de l'expérience utilisateur.",
+          "Sprints agiles au sein d'une équipe passée de 2 à 10 personnes."
+        ],
+        "en": [
+          "New features in Vue.js 2 / 3 + Vuetify (TypeScript, SASS).",
+          "Redesign and improvement of the interface and user experience.",
+          "Agile sprints within a team that grew from 2 to 10 people."
+        ]
+      },
+      "tags": ["Vue.js", "Vuetify", "TypeScript", "Cybersecurity"]
+    },
+    {
+      "role": { "fr": "Développeur Freelance", "en": "Freelance Developer" },
+      "company": "Tony's Tech",
+      "period": { "fr": "Mars 2020 — Oct. 2023", "en": "Mar. 2020 — Oct. 2023" },
+      "bullets": {
+        "fr": [
+          "7 sites vitrines et une plateforme e-commerce (WordPress, JS/PHP).",
+          "Cycle de projet complet : UI, dev, SEO, hébergement, suivi de production."
+        ],
+        "en": [
+          "7 showcase websites and an e-commerce platform (WordPress, JS/PHP).",
+          "Full project cycle: UI, dev, SEO, hosting, production monitoring."
+        ]
+      },
+      "tags": ["WordPress", "PHP", "JavaScript", "SEO"]
+    },
+    {
+      "role": { "fr": "Développeur Web — Alternance", "en": "Web Developer — Apprenticeship" },
+      "company": "Solvarea",
+      "period": { "fr": "Sept. 2018 — Sept. 2019", "en": "Sep. 2018 — Sep. 2019" },
+      "bullets": {
+        "fr": [
+          "Maintenance de l'intranet et développement du site externe (Symfony).",
+          "Systèmes automatisés de collecte de données (Vue.js) et de candidatures CV (Google Apps Script)."
+        ],
+        "en": [
+          "Intranet maintenance and external website development (Symfony).",
+          "Automated data-collection systems (Vue.js) and CV application systems (Google Apps Script)."
+        ]
+      },
+      "tags": ["Symfony", "Vue.js", "Google Apps Script"]
+    }
+  ],
+  "projectFilters": [
+    { "id": "all", "label": { "fr": "Tous", "en": "All" } },
+    { "id": "featured", "label": { "fr": "Phares", "en": "Flagship" } },
+    { "id": "web3", "label": { "fr": "Web3 & DeFi", "en": "Web3 & DeFi" } },
+    { "id": "ai", "label": { "fr": "Agents IA & LLM", "en": "AI Agents & LLM" } },
+    { "id": "vision", "label": { "fr": "Computer Vision", "en": "Computer Vision" } },
+    { "id": "saas", "label": { "fr": "SaaS & Produits", "en": "SaaS & Products" } }
+  ],
+  "projects": [
+    {
+      "name": "DAO Universalis",
+      "featured": true,
+      "category": "web3",
+      "tagline": { "fr": "dApp de gouvernance Web3", "en": "Web3 governance dApp" },
+      "description": {
+        "fr": "Stack d'une DAO décentralisée sur blockchain Minima : backend NestJS hexagonal, dApps user & admin, smart contracts, intégration DeFi, tokenomics (tokens MERCI), gouvernance sociocratique. Orchestrée via un dépôt parapluie multi-submodules.",
+        "en": "Full stack of a decentralized DAO on the Minima blockchain: hexagonal NestJS backend, user & admin dApps, smart contracts, DeFi integration, tokenomics (MERCI tokens), sociocratic governance. Orchestrated through an umbrella multi-submodule repo."
+      },
+      "tags": ["Minima", "NestJS", "Smart contracts", "DeFi", "Tokenomics", "MongoDB"],
+      "links": []
+    },
+    {
+      "name": "Deep Fake Detector",
+      "featured": true,
+      "category": "vision",
+      "tagline": { "fr": "Computer Vision — CNN", "en": "Computer Vision — CNN" },
+      "description": {
+        "fr": "Modèle CNN de détection de portraits deepfake : pipeline d'inférence, prétraitement, évaluation et application déployée.",
+        "en": "CNN model for detecting deepfake portraits: inference pipeline, preprocessing, evaluation and a deployed application."
+      },
+      "tags": ["TensorFlow", "CNN", "Computer Vision", "Python"],
+      "links": [{ "label": "Code", "url": "https://github.com/astowny/deepfake-detector" }]
+    },
+    {
+      "name": "AI Governance — M2 Research",
+      "featured": true,
+      "category": "ai",
+      "tagline": { "fr": "Management & gouvernance de l'IA", "en": "AI management & governance" },
+      "description": {
+        "fr": "Mémoire de recherche sur les cadres de conformité et d'éthique de l'IA : EU AI Act, NIST AI RMF, ISO/IEC 42001. Implémentation associée (notebook ai-risk-management-framework).",
+        "en": "Research thesis on AI compliance and ethics frameworks: EU AI Act, NIST AI RMF, ISO/IEC 42001. With an accompanying implementation (ai-risk-management-framework notebook)."
+      },
+      "tags": ["EU AI Act", "NIST AI RMF", "ISO/IEC 42001", "Research"],
+      "links": []
+    },
+    {
+      "name": "EVM Event Indexer",
+      "category": "web3",
+      "tagline": { "fr": "Indexeur multi-chaînes", "en": "Multi-chain indexer" },
+      "description": {
+        "fr": "Indexeur d'événements EVM construit from-scratch (BSC, Ethereum, Polygon, Arbitrum, Base, Avalanche), stockage Postgres + TimescaleDB, exposition via une API Hono monétisée.",
+        "en": "EVM event indexer built from scratch (BSC, Ethereum, Polygon, Arbitrum, Base, Avalanche), Postgres + TimescaleDB storage, exposed through a monetized Hono API."
+      },
+      "tags": ["TypeScript", "Hono", "Postgres", "TimescaleDB", "EVM"],
+      "links": []
+    },
+    {
+      "name": "SwapKit Aggregator API",
+      "category": "web3",
+      "tagline": { "fr": "DEX cross-chain", "en": "Cross-chain DEX" },
+      "description": {
+        "fr": "API d'agrégation DEX cross-chain : un seul quote & execute, swap natif BTC ↔ ETH via THORChain & MayaChain.",
+        "en": "Cross-chain DEX aggregation API: a single quote & execute, native BTC ↔ ETH swap via THORChain & MayaChain."
+      },
+      "tags": ["TypeScript", "THORChain", "MayaChain"],
+      "links": []
+    },
+    {
+      "name": "Bank Transfers Suite",
+      "category": "web3",
+      "tagline": { "fr": "Flux bancaires & back-office", "en": "Bank flows & back-office" },
+      "description": {
+        "fr": "Stack complète de virements bancaires : backend PHP, front admin TypeScript, back-office Appsmith, intégration paiement VADS / PayZen.",
+        "en": "Full bank-transfer stack: PHP backend, TypeScript admin front, Appsmith back-office, VADS / PayZen payment integration."
+      },
+      "tags": ["PHP", "TypeScript", "Appsmith", "VADS / PayZen"],
+      "links": []
+    },
+    {
+      "name": "Strix",
+      "category": "ai",
+      "tagline": { "fr": "Agents IA pour pentest — Open source", "en": "AI agents for pentesting — Open source" },
+      "description": {
+        "fr": "Agents IA open-source orientés tests d'intrusion / sécurité offensive. Architecture multi-agents Python.",
+        "en": "Open-source AI agents for penetration testing / offensive security. Python multi-agent architecture."
+      },
+      "tags": ["Python", "Agents", "Security"],
+      "links": []
+    },
+    {
+      "name": "OpenClaw",
+      "category": "ai",
+      "tagline": { "fr": "Assistant IA cross-OS", "en": "Cross-OS AI assistant" },
+      "description": {
+        "fr": "Assistant IA personnel portable fonctionnant sur Windows, macOS et Linux.",
+        "en": "Portable personal AI assistant running on Windows, macOS and Linux."
+      },
+      "tags": ["TypeScript", "LLM", "Cross-platform"],
+      "links": []
+    },
+    {
+      "name": "Google ADK Box Agent",
+      "category": "ai",
+      "tagline": { "fr": "Google Agent SDK", "en": "Google Agent SDK" },
+      "description": {
+        "fr": "Exemple d'agent Box construit avec le Google Agent Development Kit : intégration d'outils & orchestration.",
+        "en": "Box agent example built with the Google Agent Development Kit: tool integration & orchestration."
+      },
+      "tags": ["Python", "Google ADK", "Tool use"],
+      "links": []
+    },
+    {
+      "name": "CV ATS Optimizer",
+      "category": "ai",
+      "tagline": { "fr": "Optimisation CV face aux ATS", "en": "ATS-aware résumé optimizer" },
+      "description": {
+        "fr": "Outil IA pour optimiser les CV face aux ATS (Applicant Tracking Systems).",
+        "en": "AI tool to optimize résumés against ATS (Applicant Tracking Systems)."
+      },
+      "tags": ["JavaScript", "AI", "Tooling"],
+      "links": [
+        { "label": "Live", "url": "https://cv-ats-optimizer.vercel.app" },
+        { "label": "Code", "url": "https://github.com/astowny/cv-ats-optimizer" }
       ]
     },
     {
-      "id": "vercel",
-      "title": "Vercel",
-      "subtitle": "Apps déployées en production sur Vercel.",
-      "items": [
-        {
-          "name": "Yada Project — SendGrid API",
-          "description": "API de transactionnel email pour le projet Yada, déployée sur Vercel.",
-          "tags": ["TypeScript", "SendGrid", "API"],
-          "links": [
-            { "label": "Live", "url": "https://yada-project-sendgrid-api.vercel.app" },
-            { "label": "Code", "url": "https://github.com/astowny/yada-project-sendgrid-api" }
-          ]
-        },
-        {
-          "name": "CV ATS Optimizer",
-          "description": "Outil pour optimiser les CV face aux ATS (Applicant Tracking Systems).",
-          "tags": ["JavaScript", "AI", "Tooling"],
-          "links": [
-            { "label": "Live", "url": "https://cv-ats-optimizer.vercel.app" },
-            { "label": "Code", "url": "https://github.com/astowny/cv-ats-optimizer" }
-          ]
-        },
-        {
-          "name": "SaaS Useful Tools",
-          "description": "Boîte à outils SaaS — utilitaires divers pour devs et créateurs.",
-          "tags": ["JavaScript", "SaaS", "Tools"],
-          "links": [
-            { "label": "Live", "url": "https://saas-useful-tools.vercel.app" },
-            { "label": "Code", "url": "https://github.com/astowny/saas-useful-tools" }
-          ]
-        },
-        {
-          "name": "Documentation",
-          "description": "Site de documentation technique (MDX/Next.js).",
-          "tags": ["MDX", "Next.js", "Docs"],
-          "links": [
-            { "label": "Live", "url": "https://documentation-astowny.vercel.app" },
-            { "label": "Code", "url": "https://github.com/astowny/documentation" }
-          ]
-        }
+      "name": "SmartQuote GenAI",
+      "category": "ai",
+      "tagline": { "fr": "Générateur de devis (Gemini)", "en": "Quote generator (Gemini)" },
+      "description": {
+        "fr": "Générateur de devis intelligent avec sélection de templates et assistance IA à la rédaction.",
+        "en": "Smart quote generator with template selection and AI-assisted writing."
+      },
+      "tags": ["Gemini", "Productivity", "Applet"],
+      "links": [
+        { "label": "AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221M6T42oeW_FXhr7rSq5ZYykoX-Lt4a_W3%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" },
+        { "label": "Code", "url": "https://github.com/astowny/devis-generator-from-gemini" }
       ]
     },
     {
-      "id": "ai-studio",
-      "title": "Google AI Studio",
-      "subtitle": "Applets Gemini construites sur Google AI Studio.",
-      "items": [
-        {
-          "name": "Product Studio AI",
-          "description": "Édition photo professionnelle et nettoyage de photos produit, propulsé par Gemini 2.5 Flash Image.",
-          "tags": ["Gemini", "Image", "Applet"],
-          "links": [
-            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2212AyZ3MxvglvC2CXzUFNVzzq5uAq5yjhI%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" }
-          ]
-        },
-        {
-          "name": "SmartQuote GenAI",
-          "description": "Générateur de devis intelligent avec sélection de templates et assistance IA pour la rédaction.",
-          "tags": ["Gemini", "Productivity", "Applet"],
-          "links": [
-            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221M6T42oeW_FXhr7rSq5ZYykoX-Lt4a_W3%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" },
-            { "label": "Code", "url": "https://github.com/astowny/devis-generator-from-gemini" }
-          ]
-        },
-        {
-          "name": "SocialForge",
-          "description": "Générateur de contenu cross-platform : drafts de posts + images dédiées pour LinkedIn, X et Instagram.",
-          "tags": ["Gemini", "Social", "Applet"],
-          "links": [
-            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210A-n1EwyfU_0X8hDwLWDYrOM0DgDsRlm%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" }
-          ]
-        },
-        {
-          "name": "SVG Generator",
-          "description": "Décris un objet, une icône ou une scène — l'app le rend en SVG vectoriel.",
-          "tags": ["Gemini", "Vector", "Applet"],
-          "links": [
-            { "label": "Open in AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221AO2uR6OXFcfxpbY50UNzUxm7BpPN8ynz%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" },
-            { "label": "Code", "url": "https://github.com/astowny/svg-generator" }
-          ]
-        }
+      "name": "Product Studio AI",
+      "category": "ai",
+      "tagline": { "fr": "Édition photo produit (Gemini)", "en": "Product photo editing (Gemini)" },
+      "description": {
+        "fr": "Édition photo professionnelle et nettoyage de photos produit, propulsé par Gemini 2.5 Flash Image.",
+        "en": "Professional photo editing and product photo cleanup, powered by Gemini 2.5 Flash Image."
+      },
+      "tags": ["Gemini", "Image", "Applet"],
+      "links": [
+        { "label": "AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2212AyZ3MxvglvC2CXzUFNVzzq5uAq5yjhI%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" }
       ]
     },
     {
-      "id": "github",
-      "title": "GitHub",
-      "subtitle": "Sélection de projets open / publics sur GitHub.",
-      "items": [
-        {
-          "name": "Monteur IA",
-          "description": "Outil de montage vidéo assisté par IA.",
-          "tags": ["Python", "AI", "Video"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/monteur-ia" }
-          ]
-        },
-        {
-          "name": "Splitbill AI",
-          "description": "App d'IA pour répartir les additions entre amis automatiquement.",
-          "tags": ["AI", "Utility"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/splitbill-ai" }
-          ]
-        },
-        {
-          "name": "Recruitment Sandbox",
-          "description": "Outil génératif d'IA pour le recrutement.",
-          "tags": ["TypeScript", "AI", "HR"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/recruitment-sandbox" }
-          ]
-        },
-        {
-          "name": "Infogenius",
-          "description": "Plateforme info / contenu propulsée par IA.",
-          "tags": ["TypeScript", "AI"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/infogenius" }
-          ]
-        },
-        {
-          "name": "Useful Tools",
-          "description": "Collection d'utilitaires web pratiques.",
-          "tags": ["HTML", "Tools"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/useful-tools" }
-          ]
-        },
-        {
-          "name": "Betting Platform",
-          "description": "Prototype de plateforme de paris.",
-          "tags": ["CSS", "Web"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/betting-platform" }
-          ]
-        },
-        {
-          "name": "Deepfake Detector",
-          "description": "Détecteur de deepfakes (Jupyter / vision).",
-          "tags": ["Python", "ML", "Vision"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/deepfake-detector" }
-          ]
-        },
-        {
-          "name": "Blockchain Scripts",
-          "description": "Scripts utilitaires multi-chaînes (EVM).",
-          "tags": ["JavaScript", "Web3"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/blockchain-scripts" }
-          ]
-        },
-        {
-          "name": "Python YouTube Link Fetcher",
-          "description": "Récupère et extrait des liens YouTube en Python.",
-          "tags": ["Python", "Scraping"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/python-get-youtube-link" }
-          ]
-        },
-        {
-          "name": "Estimation WhatsApp",
-          "description": "Outil d'estimation devis via WhatsApp.",
-          "tags": ["HTML", "Productivity"],
-          "links": [
-            { "label": "Code", "url": "https://github.com/astowny/estimation-whatsapp" }
-          ]
-        }
+      "name": "SocialForge",
+      "category": "ai",
+      "tagline": { "fr": "Contenu social cross-platform", "en": "Cross-platform social content" },
+      "description": {
+        "fr": "Générateur de contenu cross-platform : drafts de posts + images dédiées pour LinkedIn, X et Instagram.",
+        "en": "Cross-platform content generator: post drafts + dedicated images for LinkedIn, X and Instagram."
+      },
+      "tags": ["Gemini", "Social", "Applet"],
+      "links": [
+        { "label": "AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210A-n1EwyfU_0X8hDwLWDYrOM0DgDsRlm%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" }
+      ]
+    },
+    {
+      "name": "SVG Generator",
+      "category": "ai",
+      "tagline": { "fr": "Texte → SVG vectoriel", "en": "Text → vector SVG" },
+      "description": {
+        "fr": "Décris un objet, une icône ou une scène — l'app le rend en SVG vectoriel.",
+        "en": "Describe an object, icon or scene — the app renders it as vector SVG."
+      },
+      "tags": ["Gemini", "Vector", "Applet"],
+      "links": [
+        { "label": "AI Studio", "url": "https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221AO2uR6OXFcfxpbY50UNzUxm7BpPN8ynz%22%5D,%22action%22:%22open%22,%22userId%22:%22101201243640611957290%22,%22resourceKeys%22:%7B%7D%7D" },
+        { "label": "Code", "url": "https://github.com/astowny/svg-generator" }
+      ]
+    },
+    {
+      "name": "SplitBill AI",
+      "category": "ai",
+      "tagline": { "fr": "Répartition d'additions", "en": "Bill splitting" },
+      "description": {
+        "fr": "App d'IA pour répartir automatiquement les additions entre amis.",
+        "en": "AI app to automatically split bills between friends."
+      },
+      "tags": ["AI", "Utility"],
+      "links": [{ "label": "Code", "url": "https://github.com/astowny/splitbill-ai" }]
+    },
+    {
+      "name": "Recruitment Sandbox",
+      "category": "ai",
+      "tagline": { "fr": "IA générative pour le recrutement", "en": "Generative AI for hiring" },
+      "description": {
+        "fr": "Outil génératif d'IA pour le recrutement et le tri de candidatures.",
+        "en": "Generative AI tool for recruitment and candidate screening."
+      },
+      "tags": ["TypeScript", "AI", "HR"],
+      "links": [{ "label": "Code", "url": "https://github.com/astowny/recruitment-sandbox" }]
+    },
+    {
+      "name": "Monteur IA",
+      "category": "ai",
+      "tagline": { "fr": "Montage vidéo assisté par IA", "en": "AI-assisted video editing" },
+      "description": {
+        "fr": "Outil de montage vidéo assisté par IA.",
+        "en": "AI-assisted video editing tool."
+      },
+      "tags": ["Python", "AI", "Video"],
+      "links": [{ "label": "Code", "url": "https://github.com/astowny/monteur-ia" }]
+    },
+    {
+      "name": "Skilance",
+      "featured": true,
+      "category": "saas",
+      "tagline": { "fr": "Marketplace freelance — 0% commission", "en": "Freelance marketplace — 0% fee" },
+      "description": {
+        "fr": "Marketplace freelance à 0 % de commission, sur un modèle d'abonnement plat.",
+        "en": "Freelance marketplace with 0% commission, on a flat subscription model."
+      },
+      "tags": ["JavaScript", "Marketplace", "SaaS"],
+      "links": [{ "label": "Live", "url": "https://skilance.devanchor.company" }]
+    },
+    {
+      "name": "Portfolio Builder",
+      "category": "saas",
+      "tagline": { "fr": "Builder Next.js 15", "en": "Next.js 15 builder" },
+      "description": {
+        "fr": "Builder de portfolios niche-curated : Next.js 15 + Postgres + Vercel, templates Default & Minimal, angle ENS / Web3.",
+        "en": "Niche-curated portfolio builder: Next.js 15 + Postgres + Vercel, Default & Minimal templates, ENS / Web3 angle."
+      },
+      "tags": ["Next.js 15", "Postgres", "Vercel", "Web3 / ENS"],
+      "links": []
+    },
+    {
+      "name": "InfoGenius",
+      "category": "saas",
+      "tagline": { "fr": "Plateforme contenu IA", "en": "AI content platform" },
+      "description": {
+        "fr": "Plateforme d'information / contenu propulsée par IA.",
+        "en": "AI-powered information / content platform."
+      },
+      "tags": ["TypeScript", "AI", "SaaS"],
+      "links": [{ "label": "Code", "url": "https://github.com/astowny/infogenius" }]
+    },
+    {
+      "name": "SaaS Useful Tools",
+      "category": "saas",
+      "tagline": { "fr": "Boîte à outils SaaS", "en": "SaaS toolbox" },
+      "description": {
+        "fr": "Boîte à outils SaaS — utilitaires divers pour devs et créateurs.",
+        "en": "SaaS toolbox — assorted utilities for developers and creators."
+      },
+      "tags": ["JavaScript", "SaaS", "Tools"],
+      "links": [
+        { "label": "Live", "url": "https://saas-useful-tools.vercel.app" },
+        { "label": "Code", "url": "https://github.com/astowny/saas-useful-tools" }
       ]
     }
-  ]
+  ],
+  "education": [
+    {
+      "title": { "fr": "Master Chef de projet IA & Big Data", "en": "MSc — AI & Big Data Project Manager" },
+      "school": "IA School",
+      "detail": { "fr": "ML · Deep Learning · NLP · Computer Vision · Gouvernance IA", "en": "ML · Deep Learning · NLP · Computer Vision · AI Governance" }
+    },
+    {
+      "title": { "fr": "Diplôme professionnel DAWIN", "en": "DAWIN Professional Diploma" },
+      "school": "IUT Bordeaux",
+      "detail": { "fr": "Développement web, mobile & fullstack", "en": "Web, mobile & fullstack development" }
+    },
+    {
+      "title": { "fr": "DUT Informatique", "en": "DUT Computer Science" },
+      "school": "IUT Bordeaux",
+      "detail": { "fr": "Algorithmique · C/C++ · SQL · génie logiciel", "en": "Algorithms · C/C++ · SQL · software engineering" }
+    }
+  ],
+  "teaching": {
+    "fr": [
+      "3 formations pro — ChatGPT, LLM, prompt engineering & IA appliquée.",
+      "1 cours réseaux de neurones — CNN, RNN, rétropropagation.",
+      "1 e-learning — HTML, CSS, JS, PHP."
+    ],
+    "en": [
+      "3 professional trainings — ChatGPT, LLM, prompt engineering & applied AI.",
+      "1 neural-network course — CNN, RNN, backpropagation.",
+      "1 e-learning — HTML, CSS, JS, PHP."
+    ]
+  },
+  "languages": [
+    { "name": { "fr": "Français", "en": "French" }, "level": { "fr": "Natif", "en": "Native" }, "value": 100 },
+    { "name": { "fr": "Anglais", "en": "English" }, "level": { "fr": "Courant (technique & pro)", "en": "Fluent (technical & professional)" }, "value": 85 },
+    { "name": { "fr": "Vietnamien", "en": "Vietnamese" }, "level": { "fr": "Notions", "en": "Basics" }, "value": 30 }
+  ],
+  "interests": {
+    "fr": ["IA & R&D", "Programmation", "Guitare", "Enseignement", "Résolution de problèmes"],
+    "en": ["AI & R&D", "Programming", "Guitar", "Teaching", "Problem solving"]
+  }
 }

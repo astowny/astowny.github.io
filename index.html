@@ -3,46 +3,146 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>astowny — portfolio</title>
-<meta name="description" content="Portfolio of astowny — builder & indie hacker. Projects across GitHub, Vercel, Skilance and Google AI Studio." />
-<meta name="theme-color" content="#0b0b0c" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='ui-monospace,monospace' font-size='34' font-weight='700' fill='%23fff'%3Ea%3C/text%3E%3C/svg%3E" />
-<meta property="og:title" content="astowny — portfolio" />
-<meta property="og:description" content="Builder & indie hacker. Web3, AI, and shipping fast." />
+<title>Tony Duong — Ingénieur Fullstack & IA</title>
+<meta name="description" content="Tony Duong — Ingénieur Fullstack & IA, 7 ans d'expérience. Plateformes web modernes, systèmes d'IA (vision, NLP, TTS), agents et architectures décentralisées (Web3). Bordeaux, France." />
+<meta name="theme-color" content="#0a1413" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a1413'/%3E%3Ctext x='50%25' y='59%25' text-anchor='middle' font-family='ui-monospace,monospace' font-size='30' font-weight='700' fill='%232dd4bf'%3ETD%3C/text%3E%3C/svg%3E" />
+<meta property="og:title" content="Tony Duong — Ingénieur Fullstack & IA" />
+<meta property="og:description" content="Plateformes web modernes, systèmes d'IA, agents & Web3. 7 ans d'expérience · Bordeaux." />
 <meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
 </head>
 <body>
-<header class="topbar">
-  <a href="#" class="brand" aria-label="astowny home">
-    <span class="dot"></span>
-    <span>astowny</span>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <a href="#hero" class="brand" data-scroll>
+    <span class="brand-mark">TD</span>
+    <span class="brand-name">Tony Duong</span>
   </a>
-  <nav class="nav" id="nav"></nav>
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
-    <svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg>
-    <svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
-  </button>
+  <nav class="nav" id="nav" aria-label="Sections"></nav>
+  <div class="topbar-actions">
+    <button id="lang-toggle" class="pill-btn" type="button" aria-label="Switch language">
+      <span data-lang-show="fr">FR</span><span class="sep">/</span><span data-lang-show="en" class="muted-pill">EN</span>
+    </button>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <main>
-  <section class="hero">
-    <h1 id="name"></h1>
-    <p class="tagline" id="tagline"></p>
-    <div class="links" id="profile-links"></div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal"><span class="ping"></span><span id="hero-role"></span> · <span id="hero-exp"></span></p>
+      <h1 class="hero-title reveal" id="hero-name"></h1>
+      <p class="hero-tagline reveal" id="hero-tagline"></p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary" data-scroll data-i18n="cta.projects">Voir les projets</a>
+        <a href="#contact" class="btn btn-ghost" data-scroll data-i18n="cta.contact">Me contacter</a>
+      </div>
+      <div class="hero-links reveal" id="hero-links"></div>
+    </div>
+    <a href="#about" class="scroll-hint" data-scroll aria-label="Scroll">
+      <span class="mouse"><span class="wheel"></span></span>
+    </a>
   </section>
 
-  <div id="sections"></div>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <span class="section-index">01</span>
+      <h2 class="section-title" data-i18n="nav.about">Profil</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-text reveal" id="about-text"></p>
+      <div class="stats reveal" id="stats"></div>
+    </div>
+  </section>
 
-  <section class="more">
-    <p>Voir tout le code public sur <a href="https://github.com/astowny" target="_blank" rel="noopener">github.com/astowny</a>.</p>
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-head reveal">
+      <span class="section-index">02</span>
+      <h2 class="section-title" data-i18n="nav.skills">Compétences</h2>
+    </div>
+    <div class="skills-grid" id="skills-grid"></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-head reveal">
+      <span class="section-index">03</span>
+      <h2 class="section-title" data-i18n="nav.experience">Expérience</h2>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-head reveal">
+      <span class="section-index">04</span>
+      <h2 class="section-title" data-i18n="nav.projects">Projets</h2>
+    </div>
+    <div class="filters reveal" id="filters"></div>
+    <div class="projects-grid" id="projects-grid"></div>
+    <p class="projects-more reveal">
+      <span data-i18n="projects.more">Tout le code public sur</span>
+      <a href="https://github.com/astowny" target="_blank" rel="noopener">github.com/astowny</a> · ~150 <span data-i18n="projects.repos">dépôts</span>.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="section-head reveal">
+      <span class="section-index">05</span>
+      <h2 class="section-title" data-i18n="nav.education">Formation</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-col">
+        <h3 class="sub-title" data-i18n="edu.degrees">Diplômes</h3>
+        <div id="education-list"></div>
+      </div>
+      <div class="edu-col">
+        <h3 class="sub-title" data-i18n="edu.teaching">Enseignement</h3>
+        <ul class="teaching-list" id="teaching-list"></ul>
+        <h3 class="sub-title" data-i18n="edu.languages">Langues</h3>
+        <div id="languages-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="contact-card reveal">
+      <span class="section-index">06</span>
+      <h2 class="contact-title" data-i18n="contact.title">Construisons quelque chose.</h2>
+      <p class="contact-sub" data-i18n="contact.sub">Disponible pour des projets fullstack, IA et Web3. Écris-moi.</p>
+      <div class="contact-actions" id="contact-actions"></div>
+    </div>
   </section>
 </main>
 
-<footer>
-  <span id="year"></span> · <a href="https://github.com/astowny/astowny.github.io" target="_blank" rel="noopener">source</a>
+<footer class="footer">
+  <span>© <span id="year"></span> Tony Duong</span>
+  <span class="footer-sep">·</span>
+  <span data-i18n="footer.built">Conçu &amp; codé sur mesure</span>
+  <span class="footer-sep">·</span>
+  <a href="https://github.com/astowny/astowny.github.io" target="_blank" rel="noopener" data-i18n="footer.source">Source</a>
 </footer>
 
+<script type="module" src="bg.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
