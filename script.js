@@ -357,13 +357,10 @@
   function initCursor() {
     if (matchMedia('(hover: none)').matches) return;
     var cur = $('#cursor');
-    var x = 0, y = 0, cx = 0, cy = 0;
-    addEventListener('pointermove', function (e) { x = e.clientX; y = e.clientY; }, { passive: true });
-    (function loop() {
-      cx += (x - cx) * 0.2; cy += (y - cy) * 0.2;
-      cur.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
-      requestAnimationFrame(loop);
-    })();
+    // follow the pointer 1:1 — no smoothing, no transition (felt laggy otherwise)
+    addEventListener('pointermove', function (e) {
+      cur.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
+    }, { passive: true });
     document.addEventListener('pointerover', function (e) {
       if (e.target.closest('a, button, .chip, .stat, .project, .skill-card')) cur.classList.add('hover');
     });

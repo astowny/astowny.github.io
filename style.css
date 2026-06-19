@@ -63,12 +63,14 @@ main, .topbar, .footer { position: relative; z-index: 2; }
 /* ---- custom cursor ---- */
 .cursor {
   position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
-  width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
-  border: 1.5px solid var(--accent);
-  transition: transform .18s var(--ease), background .2s, border-color .2s, opacity .2s;
-  mix-blend-mode: difference;
+  will-change: transform; /* position set instantly in JS — no transition here (avoids lag) */
 }
-.cursor.hover { transform: scale(1.9); background: var(--accent); border-color: transparent; }
+.cursor::before {
+  content: ""; display: block; width: 26px; height: 26px; margin: -13px 0 0 -13px;
+  border-radius: 50%; border: 1.5px solid var(--accent); mix-blend-mode: difference;
+  transition: transform .2s var(--ease), background .2s, border-color .2s;
+}
+.cursor.hover::before { transform: scale(1.9); background: var(--accent); border-color: transparent; }
 @media (hover: none) { .cursor { display: none; } }
 
 /* ---- scroll progress ---- */
