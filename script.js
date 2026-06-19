@@ -357,10 +357,17 @@
   function initCursor() {
     if (matchMedia('(hover: none)').matches) return;
     var cur = $('#cursor');
-    // follow the pointer 1:1 — no smoothing, no transition (felt laggy otherwise)
+    var x = 0, y = 0, cx = 0, cy = 0, started = false;
     addEventListener('pointermove', function (e) {
-      cur.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
+      x = e.clientX; y = e.clientY;
+      if (!started) { started = true; cx = x; cy = y; } // snap on first move, no fly-in
     }, { passive: true });
+    // light smoothing: a gentle glide that still tracks the pointer closely
+    (function loop() {
+      cx += (x - cx) * 0.35; cy += (y - cy) * 0.35;
+      cur.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+      requestAnimationFrame(loop);
+    })();
     document.addEventListener('pointerover', function (e) {
       if (e.target.closest('a, button, .chip, .stat, .project, .skill-card')) cur.classList.add('hover');
     });
